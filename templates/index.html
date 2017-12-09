@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Unicodee</title>
+    <link href="{{ url_for('static', filename='css/w3.css') }}" rel="stylesheet">
+</head>
+
+<body class="w3-light-gray">
+<div class="w3-container">
+    <form id="id-form" class="w3-container w3-center w3-sand" method="POST">
+        <h1>
+            Unicodee.
+        </h1>
+        <button id="send-button" class="w3-button w3-teal" type="submit">
+            Send
+        </button>
+    </form>
+
+    <div class="w3-container w3-center w3-row-padding">
+        <div class="w3-half">
+            <label>
+                Input
+            </label>
+            <textarea type="text" id="input-area" class="w3-input w3-border" name="input"
+                      placeholder="Enter your text..." form="id-form" rows="15">{{ data }}</textarea>
+        </div>
+        <div class="w3-half">
+            <label>
+                Output
+            </label>
+            <textarea  type="text" id="output-area" class="w3-input w3-border" contenteditable="false"
+                      placeholder="Output..." rows="15">{{ formatted_data }}</textarea>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
