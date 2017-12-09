@@ -25,6 +25,7 @@ def hello_world():
     if request.method == 'POST':
         data = request.form['input']
         if data:
+            print('[*] sent data: {}'.format(data[:30] if len(data) <= 30 else data[30] + '...'))
             formatted_data = process_data(data)
     return render_template('index.html', data=data, formatted_data=formatted_data)
 
